@@ -1,52 +1,29 @@
-![SLOPE BALL](image_slope_balls.png)
+<figure style="text-align: center">
+<img src="sd.png" alt="TEXT HERE" style="width: 50%;">
+  <figcaption> The uncertainty (right) of a latent Gaussian process, given observations (circles).</figcaption>
+</figure>
 
-## PhD Position
-We invite applications for a fully funded PhD position with a project on model selection for high dimensional data with applications 
-in genetics at Lund University. The two main coordinators of the project are  [Małgorzata Bogdan](https://www.researchgate.net/profile/Matgorzata_Bogdan) and [Jonas Wallin](https://www.researchgate.net/profile/Jonas_Wallin).
-
-
-We are looking for a student who fits into one of the following two directions in statistics:
-
-#### biostatics track
-Here the students has a
-  * MSc in mathematics, statistics, computer science, biostatistics or physics
-  * Sound knowledge of applied statistics (linear models, Bayesian statistics) 
-  * Strong programing skills (R and/or C++ )
-  * Ability to work  in an interdisciplinary team at the interface of genetics, computer science and statistics.
+## Ph.D. Position
+We invite applications for a fully funded PhD position with a project on optimal design for Gaussian processes. The goal is to develop methods for the optimal placement of sample locations in space and time. An application will be to create a sampling scheme for acquiring knowledge about AMR and plastic distribution in the aquatic environment in the Philippines and Italy. The position is at Lund University, Sweden, and the coordinator is [Jonas Wallin](https://jonaswallin.github.io/). The project is in close collaboration with [Climate-Sensitive](https://csidlab.iwr.uni-heidelberg.de/index.html) Infectious Diseases lab](https://csidlab.iwr.uni-heidelberg.de/index.html) at the University of Heidelberg, Germany.
 
 
-#### mathematical track
-Here the students has a
-  *  MSc in mathematics of statistics
-  *  Strong mathematical skills (probability, functional analysis, linear algebra)
-  *  Some experince in programming 
+
 
 ## Project Description
-In previous projects (see [1], [2]), we developed SLOPE, the convex model selection and estimation procedure for high-dimensional 
-statistical problems. Different versions of the "SLOPE ball" can be seen in the figure at the top of the page. Recently, we have also 
-developed an Adaptive Bayes version of SLOPE (ABSLOPE) [3] that allows the incorporation of prior knowledge and can handle latent variables 
- such as missing data. Despite several important articles pointing out desirable properties of SLOPE (see [4], [5], [6]), the mathematical
- theory of SLOPE is not yet fully developed. The PhD student who chooses the mathematical-statistical route of the project will be involved
- in the development of new mathematical results concerning the asymptotic properties of SLOPE and ABSLOPE, including the asymptotic control
- of the false discovery rate or the study of the prediction accuracy.
+The design of any scientific investigation involves many considerations. When one is interested in experiments in nature, or any geographical data, it is often crucial at what location the measurements are conducted. Further the optimal locations are often different if one is interested in inference (understanding the relation between variables) or prediction. The statistical theory of where to optimally place locations falls under the subject of optimal design [3]. One of the most important processes to describe spatial data is Gaussian processes, which generate continuous random fields. Gaussian processes can defined both on regular Euclidean domain [3], river networks, or other complex topologies which were explored in the recent works [1-2 and implemented in package [4]. The Figure at the top shows the uncertainty in a Gaussian process after making observations, an optimal design question would be where to place the next observations to minimize the uncertainty.
+In this project, we are both interested in exploring both theoretical and practical questions. The theoretical questions are for instance what characteristic of the random fields are most important for the adaptive design, and how to find algorithms that either place the location optimally or approximately with theoretical bounds on the errors. How does one build Gaussian models that are both on rivers and oceans situationally? Practial will be using the information in setting up an adaptive design, together with the Heidelberg group, that will be utilized to determine at what location should one measure AMR and plastic in the rivers and oceans. 
 
-The applied part of the project will mainly deal with gene identification. In our recent article [7], we showed that over-simplified 
-statistical models can lead to many false gene discoveries. We also showed that this problem can be solved by adding a random effect 
-describing the polygenic background. The difference between the two methods is shown at the bottom of the page, with the top of the figures
- illustrating the results of the classical method and the bottom of the figures illustrating our new method. In the present project, we 
-plan to extend this approach to deal with the variability of polygenic background along the chromosome. The estimation problem will be
- addressed by developing a suitable version of ABSLOPE. This will also require speeding up the ABSLOPE algorithm. The PhD student who 
-chooses the applied route will be involved in research to accelerate the algorithm (see e.g. [8]) and/or in the development of a 
-methodology for gene identification.
+#### The candidate
+
+We are looking for a student that fits the following criteria
+  * MSc in mathematics, statistics, or biostatistics 
+  * some experience programming skills (R and/or C++ )
+  * Some experience in spatial statistics, or numerical linear algebra is merting.  
 
 ## References
-1. [M. Bogdan, E. van den Berg, C. Sabatti, W. Su, and E. J. Candes. SLOPE – adaptive variable selection via convex optimization. Annals of Applied Statistics, 9(3):1103–1140, 2015.](https://projecteuclid.org/journals/annals-of-applied-statistics/volume-9/issue-3/SLOPEAdaptive-variable-selection-via-convex-optimization/10.1214/15-AOAS842.full)
-2. [D. Brzyski, A. Gossmann, W. Su, and M. Bogdan. Group SLOPE - adaptive selection of groups of predictors. Journal of the American Statistical Association, 114:419–433, 2019.](https://arxiv.org/abs/1511.09078)
-3. [W. Jiang, M. Bogdan, J. Josse, B. Miasojedow, V. Rockova, TB Group. Adaptive Bayesian SLOPE--High-dimensional Model Selection with Missing Values, arXiv:1909.06631, 2019.](https://arxiv.org/abs/1909.06631)
-4. [W. Su and E.J. Candes. SLOPE is adaptive to unknown sparsity and asymptotically minimax. Annals of Statistics, 40:1038–1068, 2016.](https://projecteuclid.org/journals/annals-of-statistics/volume-44/issue-3/SLOPE-is-adaptive-to-unknown-sparsity-and-asymptotically-minimax/10.1214/15-AOS1397.full)
-5. [P.C. Bellec, G. Lecu´e, and A.B. Tsybakov. Slope meets lasso: Improved oracle bounds and optimality. Annals of Statistics, 46(6B):3603–3642, 2018.](https://arxiv.org/abs/1605.08651)
-6. [F. Abramovich and V. Grinshtein. High-dimensional classification by sparse logistic regression. IEEE Transactions on Information Theory, 65:3068–3079, 2019.](https://arxiv.org/abs/1706.08344)
-7. [J. Wallin, M. Bogdan, P. A. Szulc, R.W. Doerge, and D.O. Siegmund. Ghost QTL and Hotspots in experimental crosses— novel approach for modeling polygenic effects. Genetics, 2021. doi:10.1093/genetics/iyaa041.](https://academic.oup.com/genetics/advance-article/doi/10.1093/genetics/iyaa041/6067404)
-8. [J. Larsson, M. Bogdan, and J. Wallin. The strong screening rule for SLOPE. Advances in Neural Information Processing Systems 33 (NeurIPS 2020), 2020.](https://papers.nips.cc/paper/2020/file/a7d8ae4569120b5bec12e7b6e9648b86-Paper.pdf)
+1. [D. Bolin, A. Simas, and J. Wallin. Gaussian Whittle-Matérn fields on metric graphs Bernoulli, in press, 2023](https://www.e-publications.org/ims/submission/BEJ/user/submissionFile/57882?confirm=4654b8a6)
+2. [D. Bolin, A. Simas, J. Wallin.  Statistical inference for Gaussian Whittle-Matérn fields on metric graphs, arXiv](hhttps://arxiv.org/abs/2304.10372)
+3. [P. Diggle, E. Giorgi. Model-based geostatistics for global public health](https://www.taylorfrancis.com/books/mono/10.1201/9781315188492/model-based-geostatistics-global-public-health-peter-diggle-emanuele-giorgi)
+4. [Metric Graph packages](https://davidbolin.github.io/MetricGraph/)
 
-<img src="Figure4_simple_1190.png" width="400"> <img src="Figure4_mixed_1190.png" width="400">
+<img src="data_krig.png" width="600">
